@@ -1,0 +1,60 @@
+{
+  "name": "test-task-educa",
+  "version": "1.0.0",
+  "description": "\"тестовое задание educa\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run eslint",
+    "eslint": "eslint src/**/*.jsx",
+    "build": "webpack --mode development",
+    "start": "webpack-dev-server --open --hot"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "dependencies": {
+    "normalize.less": "^1.0.0",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.0.3",
+    "redux": "4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "@babel/preset-react": "7.0.0",
+    "autoprefixer": "9.5.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "8.0.6",
+    "css-loader": "2.1.1",
+    "css-mqpacker": "7.0.0",
+    "cssnano": "4.1.10",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "3.2.0",
+    "less": "3.9.0",
+    "less-loader": "5.0.0",
+    "mini-css-extract-plugin": "0.6.0",
+    "postcss-import": "12.0.1",
+    "postcss-loader": "3.0.0",
+    "react-hot-loader": "^4.5.3",
+    "style-loader": "0.23.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^0.7.0",
+    "stylelint-scss": "^3.6.1",
+    "webpack": "4.31.0",
+    "webpack-cli": "3.3.2",
+    "webpack-config": "^7.5.0",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "3.3.1",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
