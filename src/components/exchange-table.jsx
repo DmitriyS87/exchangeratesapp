@@ -12,7 +12,7 @@ const ExchangeTable = (props) => {
         <div ClassName="exchange__cell">rate</div>
         <div ClassName="exchange__cell">bid</div>
         <div ClassName="exchange__cell">ask</div>
-        <div ClassName="exchange__cell">data</div>
+        <div ClassName="exchange__cell">date</div>
       </div>
       {exchangePairs.map((pair, idx) => (
         <div ClassName="exchange__row exchange__row-data">
@@ -22,7 +22,7 @@ const ExchangeTable = (props) => {
           <div ClassName="exchange__cell">{pair.rate}</div>
           <div ClassName="exchange__cell">{pair.bid}</div>
           <div ClassName="exchange__cell">{pair.ask}</div>
-          <div ClassName="exchange__cell">{pair.data}</div>
+          <div ClassName="exchange__cell">{pair.date}</div>
         </div>
       ))
       }
