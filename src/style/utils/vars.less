@@ -1,1 +1,37 @@
+// Colors
 
+@theme-primary: #ccdb37;
+@theme-secondary: #455a64; //#018786
+
+// Theme background ($mdc-theme-background) appears behind scrollable content. Surface color ($mdc-theme-surface) is mapped to the surface of components such as cards, sheets, and menus. Error color ($mdc-theme-error) is used to indicate an error state for components such as text fields provided with inaccurate input.
+
+@theme-surface: #F5F5F6;
+@theme-background: desaturate(lighten(@theme-secondary, 55%),20%); //E1E2E1
+@theme-error: #b00020;
+
+@theme-primary-dark:#98aa00;
+@theme-primary-light: #ffff6c;
+@theme-secondary-light: saturate(lighten(@theme-secondary, 5%),25%);
+
+
+// “On-” colors define how text, icons, and strokes are colored in relation to the surface on which they appear. If you are updating these manually, be sure to consider accessible color contrast for the value pairs.
+
+@theme-on-primary: #000000;
+@theme-on-secondary: #ffffff;
+@theme-on-error: #ffffff;
+@theme-on-surface: #000000;
+
+// Screens
+@screens: {
+  smallmobile: 320px;
+  mobile: 768px;
+  tablet: 968;
+  desktop: 1024px;
+}
+
+/* Shapes */
+// The shapes of small, medium, and large components can be themed by overriding the default values. We recommend using our shape customization tool to help you pick your radius values. https://material.io/design/shape/about-shape.html#shape-customization-tool
+
+@shape-small-component-radius: 4px;
+@shape-medium-component-radius: 4px;
+@shape-large-component-radius: 0px;
