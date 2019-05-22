@@ -8,7 +8,8 @@ const SERVISES_CONSTANT = {
     401: 'Недостаточно прав для выполнения запроса на сервер! Пройдите авторизацию. 401',
     404: 'Ошибка при загрузке данных! Запрашиваемая инфомрация не найдена. 404',
   },
-  TIMEOUT: 3000,
+  TIMEOUT: 6000,
+  STORAGE_KEY: 'change_rate_table',
 };
 
 export default SERVISES_CONSTANT;
