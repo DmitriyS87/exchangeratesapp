@@ -1,10 +1,9 @@
 import ACTION_CONSTANT from '../constants/action.constant';
 import MESSAGE_CONSTANT from '../constants/message.constant';
-import { RESPONSE } from '../mocks/response.mock';
-import DataParcer from '../utils/data-parser';
+import toFixedExchangeData from '../utils/action.data';
 
 const initialState = {
-  data: [{ ...DataParcer.parseCurrencyPair(RESPONSE), '#': 0 }],
+  data: [],
   request: false,
   error: false,
   message: '',
@@ -27,9 +26,9 @@ const currencyPairsReducer = (state = initialState, action) => {
 
     case ACTION_CONSTANT.SUCCESS: {
       const newState = {
- ...state, request: false, error: false, message: MESSAGE_CONSTANT.MSG_SUCCESS 
-};
-      newState.data = newState.data.concat({ ...action.data, '#': newState.data.length });
+        ...state, request: false, error: false, message: MESSAGE_CONSTANT.MSG_SUCCESS,
+      };
+      newState.data = newState.data.concat({ ...toFixedExchangeData(action.data), '#': newState.data.length });
       return newState;
     }
 

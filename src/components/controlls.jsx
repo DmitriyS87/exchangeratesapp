@@ -23,7 +23,7 @@ class Controlls extends React.Component {
   }
 
   render() {
-    const { currensies, onClick, children } = this.props;
+    const { onClick, children } = this.props;
     const { from, to } = this.state;
 
     const constantsFrom = CONTROLS_CONSTANTS.FROM;
@@ -42,7 +42,7 @@ class Controlls extends React.Component {
               {constantsFrom}
             </span>
             <select key="constantsFrom" className="controls__select" value={from} onChange={this.handleChangeFrom}>
-              {currensies.map(currency => <option key={constantsFrom + currency} value={currency}>{currency}</option>)}
+              {CONTROLS_CONSTANTS.CURRENCIES.map(currency => <option key={constantsFrom + currency.currencyCode} value={currency.currencyCode}>{currency.currencyName}</option>)}
             </select>
           </div>
           <div key="controlsItemTo" className="controls__item">
@@ -50,7 +50,7 @@ class Controlls extends React.Component {
               {constantsTo}
             </span>
             <select key="constantsTo" className="controls__select" value={to} onChange={this.handleChangeTo}>
-              {currensies.map(currency => <option key={constantsTo + currency} value={currency}>{currency}</option>)}
+              {CONTROLS_CONSTANTS.CURRENCIES.map(currency => <option key={constantsTo + currency.currencyCode} value={currency.currencyCode}>{currency.currencyName}</option>)}
             </select>
           </div>
           <div className="controls__item">
