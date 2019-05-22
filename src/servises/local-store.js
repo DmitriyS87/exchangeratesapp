@@ -36,7 +36,7 @@ class LocalStore {
   }
 
   getAll() {
-    const emptyItems = {};
+    const emptyItems = [];
     const items = this.storage.getItem(this.storeKey);
 
     if (!items) {

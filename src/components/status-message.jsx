@@ -14,7 +14,7 @@ const StatusMessage = (props) => {
 
 StatusMessage.propTypes = {
   message: PropTypes.string.isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.bool.isRequired,
 };
 
 export default StatusMessage;

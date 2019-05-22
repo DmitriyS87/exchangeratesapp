@@ -36,8 +36,6 @@ const currencyPairsReducer = (state = initialState, action) => {
       const newState = {
         ...state, request: false, error: false, message: MESSAGE_CONSTANT.MSG_SUCCESS,
       };
-      console.log(newState.data);
-      console.log(newState.data.length);
 
       localStore.pushItem(newState.data.length, { ...toFixedExchangeData(action.data) });
       newState.data = objectToArray(localStore.getAll());

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable import/extensions */
@@ -61,7 +62,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   message: PropTypes.string.isRequired,
   error: PropTypes.bool.isRequired,
@@ -70,7 +71,7 @@ App.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  data: state.data, message: state.message, error: state.error, request: state.request,
+  data: state.data, message: state.message, error: Boolean(state.error), request: Boolean(state.request),
 });
 
 const mapDispatchToProps = dispatch => ({
