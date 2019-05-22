@@ -28644,6 +28644,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable max-len */
+
 /* eslint-disable react/no-array-index-key */
 
 /* eslint-disable react/forbid-prop-types */
@@ -28746,8 +28748,8 @@ var mapStateToProps = function mapStateToProps(state) {
   return {
     data: state.data,
     message: state.message,
-    error: state.error,
-    request: state.request
+    error: Boolean(state.error),
+    request: Boolean(state.request)
   };
 };
 
@@ -28954,6 +28956,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* eslint-disable react/require-default-props */
+
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -28967,9 +28971,7 @@ var ExchangeTableRow = function ExchangeTableRow(props) {
       style = _props$style === void 0 ? 'exchange__row-data' : _props$style,
       _props$count = props.count,
       count = _props$count === void 0 ? 0 : _props$count,
-      _props$onClick = props.onClick,
-      _onClick = _props$onClick === void 0 ? function () {} : _props$onClick;
-
+      _onClick = props.onClick;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "exchange__row ".concat(style),
     onClick: function onClick() {
@@ -29824,8 +29826,6 @@ var currencyPairsReducer = function currencyPairsReducer() {
           message: _constants_message_constant__WEBPACK_IMPORTED_MODULE_1__["default"].MSG_SUCCESS
         });
 
-        console.log(_newState.data);
-        console.log(_newState.data.length);
         localStore.pushItem(_newState.data.length, _objectSpread({}, Object(_utils_action_data__WEBPACK_IMPORTED_MODULE_2__["default"])(action.data)));
         _newState.data = objectToArray(localStore.getAll());
         return _newState;
@@ -30037,7 +30037,7 @@ function () {
   }, {
     key: "getAll",
     value: function getAll() {
-      var emptyItems = {};
+      var emptyItems = [];
       var items = this.storage.getItem(this.storeKey);
 
       if (!items) {
