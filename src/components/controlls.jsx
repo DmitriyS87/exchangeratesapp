@@ -7,14 +7,27 @@ class Controlls extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      from: '',
-      to: '',
+      from: props.currensies[0],
+      to: props.currensies[0],
     };
+    this.handleChangeFrom = this.handleChangeFrom.bind(this);
+    this.handleChangeTo = this.handleChangeTo.bind(this);
+  }
+
+  handleChangeFrom(evt) {
+    this.setState({ from: evt.target.value });
+  }
+
+  handleChangeTo(evt) {
+    this.setState({ to: evt.target.value });
   }
 
   render() {
-    const { currensies, onClick } = this.props;
+    const { currensies, onClick, children } = this.props;
     const { from, to } = this.state;
+
+    const constantsFrom = CONTROLS_CONSTANTS.FROM;
+    const constantsTo = CONTROLS_CONSTANTS.TO;
 
     return (
       <section className="controls">
@@ -24,25 +37,26 @@ class Controlls extends React.Component {
           </span>
         </div>
         <div className="controls__container">
-          <div className="controls__item">
+          <div key="controlsItemFrom" className="controls__item">
             <span className="controls__text">
-              {CONTROLS_CONSTANTS.FROM}
+              {constantsFrom}
             </span>
-            <select className="controls__select">
-              {currensies.map(currency => <option key={CONTROLS_CONSTANTS.FROM + currency} value={currency}>{currency}</option>)}
+            <select key="constantsFrom" className="controls__select" value={from} onChange={this.handleChangeFrom}>
+              {currensies.map(currency => <option key={constantsFrom + currency} value={currency}>{currency}</option>)}
+            </select>
+          </div>
+          <div key="controlsItemTo" className="controls__item">
+            <span className="controls__text">
+              {constantsTo}
+            </span>
+            <select key="constantsTo" className="controls__select" value={to} onChange={this.handleChangeTo}>
+              {currensies.map(currency => <option key={constantsTo + currency} value={currency}>{currency}</option>)}
             </select>
           </div>
           <div className="controls__item">
-            <span className="controls__text">
-              {CONTROLS_CONSTANTS.TO}
-            </span>
-            <select className="controls__select">
-              {currensies.map(currency => <option key={CONTROLS_CONSTANTS.TO + currency} value={currency}>{currency}</option>)}
-            </select>
+            <button type="button" className="controls__button" onClick={() => { onClick(this.state); }}>{CONTROLS_CONSTANTS.BUTTON_TITLE}</button>
           </div>
-          <div className="controls__item">
-            <button type="button" className="controls__button" onClick={onClick}>{CONTROLS_CONSTANTS.BUTTON_TITLE}</button>
-          </div>
+          {children}
         </div>
 
       </section>
