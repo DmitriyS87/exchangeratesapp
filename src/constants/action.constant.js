@@ -1,0 +1,8 @@
+const ACTION_CONSTANT = {
+  ADD: 'ADD',
+  SUCCESS: 'SUCCESS',
+  DELETE: 'DELETE',
+  RESOLVE: 'RESOLVE',
+};
+
+export default ACTION_CONSTANT;
