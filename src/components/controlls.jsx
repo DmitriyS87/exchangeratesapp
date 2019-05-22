@@ -29,7 +29,7 @@ class Controlls extends React.Component {
               {CONTROLS_CONSTANTS.FROM}
             </span>
             <select className="controls__select">
-              {currensies.map(currency => <option value={currency} selected={from === currency ? 'selected' : ''}>{currency}</option>)}
+              {currensies.map(currency => <option key={CONTROLS_CONSTANTS.FROM + currency} value={currency}>{currency}</option>)}
             </select>
           </div>
           <div className="controls__item">
@@ -37,7 +37,7 @@ class Controlls extends React.Component {
               {CONTROLS_CONSTANTS.TO}
             </span>
             <select className="controls__select">
-              {currensies.map(currency => <option value={currency} selected={to === currency ? 'selected' : ''}>{currency}</option>)}
+              {currensies.map(currency => <option key={CONTROLS_CONSTANTS.TO + currency} value={currency}>{currency}</option>)}
             </select>
           </div>
           <div className="controls__item">
