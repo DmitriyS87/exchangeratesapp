@@ -16,7 +16,7 @@ const ExchangeTableRow = (props) => {
 };
 
 ExchangeTableRow.propTypes = {
-  count: PropTypes.number.isRequired,
+  count: PropTypes.number,
   children: PropTypes.node.isRequired,
   style: PropTypes.string.isRequired,
   onClick: PropTypes.func,
