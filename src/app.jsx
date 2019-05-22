@@ -23,7 +23,6 @@ class App extends React.Component {
   }
 
   handleClickAdd(newCurrencyPair) {
-    console.log(newCurrencyPair);
     const { addNewPair } = this.props;
     addNewPair(newCurrencyPair);
   }
@@ -35,10 +34,8 @@ class App extends React.Component {
 
   render() {
     const {
-      data, currencies, message, error, request,
+      data, currencies, message, error,
     } = this.props;
-
-    console.log(request);
 
     return (
       <React.Fragment>
@@ -68,7 +65,8 @@ App.propTypes = {
   currencies: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   message: PropTypes.string.isRequired,
   error: PropTypes.bool.isRequired,
-  request: PropTypes.bool.isRequired,
+  addNewPair: PropTypes.func.isRequired,
+  deletePair: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

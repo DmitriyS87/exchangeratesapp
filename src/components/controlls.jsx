@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -67,6 +68,7 @@ class Controlls extends React.Component {
 Controlls.propTypes = {
   currensies: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Controlls;

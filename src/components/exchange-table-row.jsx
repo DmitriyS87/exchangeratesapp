@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -14,8 +16,9 @@ const ExchangeTableRow = (props) => {
 
 ExchangeTableRow.propTypes = {
   count: PropTypes.number.isRequired,
-  children: PropTypes.node,
-  style: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  style: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ExchangeTableRow;
