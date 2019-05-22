@@ -19,13 +19,14 @@ class App extends React.Component {
 
   render() {
     const { data, currencies } = this.props;
-    console.log(data.fromCurrencyCode);
+    console.log(data);
+    console.log(currencies);
 
     return (
       <React.Fragment>
         <Title />
         <Controls currensies={currencies} onClick={this.handleClickAdd} />
-        <ExchangeTable exchangePairs={data} />
+        <ExchangeTable exchangePairs={[data]} />
       </React.Fragment>
     );
   }
