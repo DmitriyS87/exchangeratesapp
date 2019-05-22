@@ -28710,7 +28710,8 @@ function (_React$Component) {
         error: error
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_exchange_table_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_exchange_table_row_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
         style: _constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].HEADER_ROW_STYLE,
-        key: "row".concat(_constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].ROW_TITLE_INDEX)
+        key: "row".concat(_constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].ROW_TITLE_INDEX),
+        onClick: function onClick() {}
       }, _constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].TITLES.map(function (title, column) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_exchange_table_cell_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
           title: title,
@@ -28981,7 +28982,7 @@ var ExchangeTableRow = function ExchangeTableRow(props) {
 };
 
 ExchangeTableRow.propTypes = {
-  count: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  count: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node.isRequired,
   style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
