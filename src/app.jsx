@@ -45,7 +45,7 @@ class App extends React.Component {
           <StatusMessage message={message} error={error} />
         </Controls>
         <ExchangeTable>
-          <ExchangeTableRow style={TABLE_CONSTANTS.HEADER_ROW_STYLE} key={`row${TABLE_CONSTANTS.ROW_TITLE_INDEX}`}>
+          <ExchangeTableRow style={TABLE_CONSTANTS.HEADER_ROW_STYLE} key={`row${TABLE_CONSTANTS.ROW_TITLE_INDEX}`} onClick={() => {}}>
             {TABLE_CONSTANTS.TITLES.map((title, column) => <ExchangeTableCell title={title} key={`row${TABLE_CONSTANTS.ROW_TITLE_INDEX}cell${column}`} />)}
           </ExchangeTableRow>
           {data.map((row, idx) => (
