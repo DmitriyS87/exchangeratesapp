@@ -28709,6 +28709,7 @@ function (_React$Component) {
         message: message,
         error: error
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_exchange_table_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_exchange_table_row_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        count: -1,
         style: _constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].HEADER_ROW_STYLE,
         key: "row".concat(_constants_table_constants__WEBPACK_IMPORTED_MODULE_11__["default"].ROW_TITLE_INDEX),
         onClick: function onClick() {}
