@@ -28734,7 +28734,7 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 App.propTypes = {
-  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired,
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array.isRequired,
   currencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired).isRequired,
   message: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   error: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired,
@@ -28965,8 +28965,11 @@ var ExchangeTableRow = function ExchangeTableRow(props) {
       children = _props$children === void 0 ? '' : _props$children,
       _props$style = props.style,
       style = _props$style === void 0 ? 'exchange__row-data' : _props$style,
-      count = props.count,
-      _onClick = props.onClick;
+      _props$count = props.count,
+      count = _props$count === void 0 ? 0 : _props$count,
+      _props$onClick = props.onClick,
+      _onClick = _props$onClick === void 0 ? function () {} : _props$onClick;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "exchange__row ".concat(style),
     onClick: function onClick() {
@@ -28979,7 +28982,7 @@ ExchangeTableRow.propTypes = {
   count: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node.isRequired,
   style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (ExchangeTableRow);
 
@@ -29045,7 +29048,7 @@ var StatusMessage = function StatusMessage(props) {
 
 StatusMessage.propTypes = {
   message: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  error: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+  error: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (StatusMessage);
 
