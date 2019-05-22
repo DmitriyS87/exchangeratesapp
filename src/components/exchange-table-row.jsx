@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ExchangeTableRow = (props) => {
-  const { children = '', style = 'exchange__row-data', count } = props;
+  const {
+    children = '', style = 'exchange__row-data', count, onClick,
+  } = props;
   return (
-    <div className={`exchange__row ${style}`}>
+    <div className={`exchange__row ${style}`} onClick={() => onClick(count)}>
       {children}
     </div>
   );
